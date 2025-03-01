@@ -4,21 +4,19 @@ import java.util.List;
 
 final public class RabbitMqUserQueues {
 
-  public static final String RECORD_USER_DETAILS_CREATE = "record_user_create_queue";
-  public static final String RECORD_USER_DELETION = "record_user_deletion_queue";
-
-  public static final String CUSTOM_FOOD_USER_DELETION = "custom_food_user_deletion_queue";
-
-  public static final String USER_DETAILS_USER_DELETION = "user_details_user_deletion_queue";
+  public static final String USER_DETAILS_CREATION_NOTIFY_RECORD = "user_details_creation_notify_record_queue";
+  public static final String USER_DELETION_NOTIFY_RECORD = "user_deletion_notify_record_queue";
+  public static final String USER_DELETION_NOTIFY_CUSTOM_FOOD = "user_deletion_notify_custom_food_queue";
+  public static final String USER_DELETION_NOTIFY_USER_DETAILS = "user_deletion_notify_user_details_queue";
 
   private RabbitMqUserQueues() {
   }
 
   public static List<String> getAllQueuesUserCreate() {
-    return List.of(RECORD_USER_DETAILS_CREATE);
+    return List.of(USER_DETAILS_CREATION_NOTIFY_RECORD);
   }
 
   public static List<String> getAllQueuesUserDeletion() {
-    return List.of(RECORD_USER_DELETION, CUSTOM_FOOD_USER_DELETION , USER_DETAILS_USER_DELETION);
+    return List.of(USER_DELETION_NOTIFY_RECORD, USER_DELETION_NOTIFY_CUSTOM_FOOD, USER_DELETION_NOTIFY_USER_DETAILS);
   }
 }
