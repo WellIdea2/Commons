@@ -9,4 +9,5 @@ public final class UserDetailsControllerPaths {
   public static final String CREATE = "";
   public static final String GET_BY_ID = "/{id}";
   public static final String EDIT = "/{id}";
+  public static final String ME = "/me";
 }
